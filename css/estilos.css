@@ -536,7 +536,7 @@ details.acordeon[open] summary::after { transform: rotate(45deg); }
 }
 
 /* Foto del autor en la tarjeta de equipo */
-img.avatar--foto { object-fit: cover; object-position: 50% 35%; border: 3px solid var(--vino); padding: 0; }
+img.avatar--foto { object-fit: cover; object-position: 50% 35%; border: 3px solid var(--vino); padding: 0; display: block; }
 .miembro--autor { border-color: var(--vino); }
 
 /* Evita desborde horizontal en móviles */
