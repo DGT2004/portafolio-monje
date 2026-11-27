@@ -122,6 +122,19 @@
         </div>
       </div>
 
+      <div class="destacado credito-libro revelar" style="margin-bottom:1.4rem">
+        <div class="credito-libro__icono"><svg aria-hidden="true"><use href="#i-libro"/></svg></div>
+        <div>
+          <span class="sello">Compilado del semestre · 94 páginas</span>
+          <h3>Bitácoras del semestre 2026-B · Equipo 6</h3>
+          <p>Las seis bitácoras de los proyectos 1 a 6 reunidas en un solo documento, sin modificar su contenido, con un índice general, el hilo conductor que conecta cada proyecto con el siguiente y un resumen de las fallas y los aciertos de cada uno. <span class="peso">23 MB</span></p>
+          <div class="descarga__botones">
+            <a class="btn btn--vino" href="assets/documentos/bitacoras-semestre-2026b-equipo6.pdf" download><svg aria-hidden="true"><use href="#i-descargar"/></svg>Descargar bitácora final (PDF)</a>
+            <a class="btn btn--contorno" href="assets/documentos/bitacoras-semestre-2026b-equipo6.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ojo"/></svg>Ver PDF</a>
+          </div>
+        </div>
+      </div>
+
       <div class="seccion__titulo revelar" style="margin-top:2.4rem">
         <h2>Proyectos del curso</h2>
         <p>Selecciona una tarjeta para abrir la ficha técnica y educativa completa.</p>
@@ -1002,7 +1015,10 @@
       <h1>Rediseño V2 verificado por peor caso: relés de 12 V y excitación por MOSFET</h1>
       <p class="resumen">Consolidación del puente H para la PSoC 5LP: la etapa de potencia pasa de transistores bipolares a MOSFET de canal N AO3400A (47 µA por pin, margen ×85), relés SRD-12VDC-SL-C alimentados directamente a 12 V y seis diodos Schottky SS34. Trece parámetros de peor caso superan ×1, el costo es de USD 14,36 por pedido y el firmware espera 500 ms antes de reactivar un relé.</p>
       <div class="hero__chips" style="justify-content:flex-start">
-        <span class="chip">AO3400A</span><span class="chip">SRD-12VDC-SL-C</span><span class="chip">Schottky SS34</span><span class="chip">13 márgenes &gt; ×1</span><span class="chip">USD 14,36</span>
+        <span class="chip">AO3400A</span><span class="chip">SRD-12VDC-SL-C</span><span class="chip">Schottky SS34</span><span class="chip">13 márgenes &gt; ×1</span><span class="chip">USD 14,36</span><span class="chip">Póster 80 × 160 cm</span>
+      </div>
+      <div class="descarga__botones" style="margin-top:1.2rem">
+        <a class="btn btn--dorado" href="#" data-abrir-figura="poster-p6"><svg aria-hidden="true"><use href="#i-ojo"/></svg>Ver póster final</a>
       </div>
     </div>
   </div>
@@ -1010,6 +1026,17 @@
     <div class="bloque revelar">
       <h2>Objetivo y planteamiento</h2>
       <p class="texto-largo">Los pines GPIO del CY8C58LP garantizan apenas 4 mA en salida, mientras un motor DC de 12 V exige amperios e inversión segura de giro. Con una metodología de diseño ágil, guiada por dos revisiones presenciales con el docente, el equipo conservó el núcleo topológico seguro de la V1 e iteró sobre sus limitaciones térmicas y de corriente hasta el Rediseño V2.</p>
+    </div>
+
+    <div class="bloque revelar">
+      <h2>Iteraciones y revisiones con el docente</h2>
+      <div class="pasos">
+        <div class="tarjeta paso fallo"><h3>V0 · Supuestos sin respaldo <span class="estado estado--fallo">Descartado</span></h3><p>R<sub>B</sub> = 220 Ω (≈ 20 mA por pin) y bobina de 5 V excitada al 131 %: valores que no salían de ninguna hoja de datos.</p></div>
+        <div class="tarjeta paso"><h3>V1 · Primera revisión (20 nov 2026)</h3><p>Rediseño verificado contra hojas de datos: MMBT2222A con R<sub>B</sub> = 1 kΩ (≤ 4,1 mA por pin), relés SRD-05VDC con R<sub>S</sub> = 100 Ω de 1 W (68,8 mA, 96 %), 1N4007 en las bobinas y PCB de dos capas de ~60 × 35 mm. Se presentó en dos láminas: una analítica en fondo claro y otra bajo el marco CDIO.</p></div>
+        <div class="tarjeta paso"><h3>Retroalimentación del docente</h3><p>Cada elemento (esquemático, tabla de estados, márgenes y conexión física) debe entenderse sin exposición oral; cada versión conserva lo probado en vez de reiniciar; y nada se escala a fabricación sin validación práctica en laboratorio. La auditoría detectó tres mejoras: los 4,1 mA por pin estaban justo en el límite, las R<sub>S</sub> de 1 W disipaban calor y faltaba supresión de picos en los bornes del motor.</p></div>
+        <div class="tarjeta paso"><h3>V2 · Segunda revisión (24 nov 2026)</h3><p>Lámina técnica con MOSFET AO3400A, relés de 12 V directos, seis diodos SS34, tabla de 4 estados, 13 márgenes de peor caso, costo de USD 14,36 y espera de 500 ms por firmware.</p></div>
+        <div class="tarjeta paso exito"><h3>Póster divulgativo definitivo (26 nov 2026) <span class="estado estado--ok">Entrega final</span></h3><p>Edición vertical 1:2 (80 × 160 cm) que refina la diagramación y la legibilidad a distancia sin alterar ningún parámetro eléctrico verificado.</p></div>
+      </div>
     </div>
 
     <div class="bloque revelar">
@@ -1073,8 +1100,16 @@
         <div class="tarjeta"><h3 style="margin-top:0">Protección hardware + firmware</h3><p style="margin:0">Además de la inmunidad topológica al estado 11, el firmware espera 500 ms antes de reactivar un relé para que el rebote mecánico o la inercia del rotor no generen arcos.</p></div>
         <div class="tarjeta"><h3 style="margin-top:0">Costo</h3><p style="margin:0"><span class="mono" style="font-size:1.6rem;color:var(--vino);font-weight:700">USD 14,36</span><br>por pedido, 28,2 % por debajo del techo de USD 20.</p></div>
       </div>
-      <div class="galeria" style="margin-top:1.2rem;grid-template-columns:minmax(0,420px)">
-        <figure class="figura figura--alta" tabindex="0"><div class="figura__img"><img src="assets/proyectos/proyecto-06/img/lamina-redisenio-v2.jpg" alt="Lámina técnica del Rediseño V2" loading="lazy"></div><figcaption>Lámina técnica presentada en la segunda revisión: esquemático V2, tabla de estados, márgenes de peor caso, conexión real y costo.</figcaption></figure>
+      <p class="texto-largo" style="margin-top:1.2rem"><strong>Estado:</strong> la PCB mostrada corresponde al diseño previo (R1) y su actualización a V2 está pendiente. Antes de pasar a fabricación industrial falta la validación experimental en banco: medir la corriente real por pin (~47 µA), verificar los cuatro estados con la espera de 500 ms y confirmar la estabilidad térmica bajo carga continua.</p>
+    </div>
+
+    <div class="bloque revelar">
+      <h2>Póster final y láminas de revisión</h2>
+      <div class="galeria">
+        <figure class="figura figura--alta" id="poster-p6" tabindex="0"><div class="figura__img"><img src="assets/proyectos/proyecto-06/img/poster-final-v2.jpg" alt="Póster final «Puente H con Relés – V2»" loading="lazy"></div><figcaption>Póster divulgativo definitivo «Puente H con Relés – V2» (26 nov 2026, 80 × 160 cm).</figcaption></figure>
+        <figure class="figura figura--alta" tabindex="0"><div class="figura__img"><img src="assets/proyectos/proyecto-06/img/lamina-redisenio-v2.jpg" alt="Lámina técnica del Rediseño V2" loading="lazy"></div><figcaption>Segunda revisión (24 nov): lámina técnica del Rediseño V2.</figcaption></figure>
+        <figure class="figura figura--alta" tabindex="0"><div class="figura__img"><img src="assets/proyectos/proyecto-06/img/propuesta-v1-clara.jpg" alt="Propuesta V1 en fondo claro" loading="lazy"></div><figcaption>Primera revisión (20 nov): propuesta V1 analítica en fondo claro.</figcaption></figure>
+        <figure class="figura figura--alta" tabindex="0"><div class="figura__img"><img src="assets/proyectos/proyecto-06/img/propuesta-v1-cdio.jpg" alt="Propuesta V1 bajo el marco CDIO" loading="lazy"></div><figcaption>Primera revisión (20 nov): propuesta V1 bajo el marco CDIO.</figcaption></figure>
       </div>
     </div>
 
@@ -1084,7 +1119,7 @@
         <article class="tarjeta descarga descarga--principal">
           <span class="descarga__tipo">Informe técnico IEEE · PDF</span>
           <h3>Rediseño V2 del módulo expansor de puente H</h3>
-          <p>Selección topológica, evolución V1 → V2, peor caso, firmware y viabilidad económica. <span class="peso">556 KB</span></p>
+          <p>Evolución V0 → V1 → V2, revisiones con el docente, peor caso, firmware, viabilidad económica y póster final (Rev. 5). <span class="peso">794 KB</span></p>
           <div class="descarga__botones">
             <a class="btn btn--vino" href="assets/proyectos/proyecto-06/informe-modulo-puente-h-v2.pdf" download><svg aria-hidden="true"><use href="#i-descargar"/></svg>Descargar Informe (PDF)</a>
             <a class="btn btn--contorno" href="assets/proyectos/proyecto-06/informe-modulo-puente-h-v2.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ojo"/></svg>Ver PDF</a>
@@ -1093,10 +1128,19 @@
         <article class="tarjeta descarga">
           <span class="descarga__tipo">Bitácora · PDF</span>
           <h3>Bitácora del Proyecto 6</h3>
-          <p>Evidencias P6-E01 a P6-E07 y registro cronológico de decisiones técnicas. <span class="peso">363 KB</span></p>
+          <p>Evidencias P6-E01 a P6-E08: borradores del puente H, revisiones docentes, verificación en peor caso y póster final (Rev. 5). <span class="peso">1.3 MB</span></p>
           <div class="descarga__botones">
             <a class="btn btn--contorno" href="assets/proyectos/proyecto-06/bitacora-proyecto-6.pdf" download><svg aria-hidden="true"><use href="#i-descargar"/></svg>Descargar</a>
             <a class="btn btn--contorno" href="assets/proyectos/proyecto-06/bitacora-proyecto-6.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ojo"/></svg>Ver PDF</a>
+          </div>
+        </article>
+        <article class="tarjeta descarga">
+          <span class="descarga__tipo">Póster · JPG</span>
+          <h3>Póster final «Puente H con Relés – V2»</h3>
+          <p>Edición definitiva vertical de 80 × 160 cm, del 26 de noviembre de 2026. <span class="peso">331 KB</span></p>
+          <div class="descarga__botones">
+            <a class="btn btn--dorado" href="assets/proyectos/proyecto-06/img/poster-final-v2.jpg" download><svg aria-hidden="true"><use href="#i-descargar"/></svg>Descargar Póster</a>
+            <a class="btn btn--contorno" href="#" data-abrir-figura="poster-p6"><svg aria-hidden="true"><use href="#i-ojo"/></svg>Ver</a>
           </div>
         </article>
       </div>
